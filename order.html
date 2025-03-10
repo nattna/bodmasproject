@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brackets</title>
+    <link rel="stylesheet" href="sections.css"/>
+</head>
+<body>
+    <div class="container">
+        <div id="brackets" class="justify-centre flex-column">
+            <h2 id="orders">Order</h2>
+            <p>Order is the <b>2nd operator</b> in the BODMAS rule</p>
+            <p>Any orders are done after anything in brackets if there are any</p>
+            <p>Orders can refer to either <b>powers, indicies, roots or exponents</b>
+               (For example 2<sup>2</sup> = 4, 3<sup>3</sup> = 27)</p>
+            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b></p>
+            <p><b>Below are some examples of BODMAS questions using order to give you an idea:</b></p>
+            <ul>
+                <li>2<sup>2</sup> + 8 = 4 + 8 = 12</li>
+                <li>3 x 5<sup>2</sup> = 3 x 25 = 75</li>
+                <li>4<sup>3</sup> &divide; 4 = 64 &divide; 10 = 16</li>
+            </ul>
+            <p><b>Below are some examples of BODMAS questions using order
+               and where you might go wrong:</b></p>
+            <ol>
+                <li>7 + 4 x 2<sup>2</sup></p></li>
+                <p>Answer = 23</p>
+                <p>Potential mistake: You may end up calculating 7 + 4 as you may know to work from left to right
+                   for equations but, in BODMAS you work based on the order of importance, therefore you must do
+                   calculate the order, then you multify and finally add.</p>
+                <p><b>Here is a further step by step breakdown for you to understand:</b></p>
+                <img src = "example4.png" style="width:600px;height:350px;">
+                <li>99 - 3<sup>3</sup> + 50 </p></li>
+                <p>Answer = 22 </p>
+                <p>Potential mistake: You may end up calculating 99 - 27 after calculating 3<sup>3</sup> (= 27) 
+                   as you may know to work from left to right for equations but, in BODMAS you work based on the 
+                   order of importance, therefore you must calculate the order, then you add and finally subtract.</p>
+                <p><b>Here is a further step by step breakdown for you to understand:</b></p>
+                <img src = "example5.png" style="width:600px;height:350px;"></p>
+                <li>144 &divide; 2 x 6<sup>2</sup> </p></li>
+                <p>Answer = 2</p>
+                <p>Potential mistake: You may end up calculating 144 &divide; 2 as you may know to work from left to right
+                    for equations but, in BODMAS you work based on the order of importance, therefore you must do
+                   calculate the order, then you multify and finally divide.</p>
+                <p><b>Here is a further step by step breakdown for you to understand:</b></p>
+                <img src = "example6.png" style="width:600px;height:350px;">
+            </ol>
+            <p><b>Have a go at the example below:</b></p>
+            <div id="demo">
+                <p>Let AJAX change this text</p>
+                <button type="button" onclick="loadAnswer_4()">Show Answer</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
