@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
+
+body {
+    font-family: "Source Code Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    background: #17ccc3;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+  width: 1000px;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: "Sixtyfour Convergence", serif;
+  text-align: center;
+  background: linear-gradient(to right, 
+  #ef5350,
+  #f48fb1,
+  #7e57c2,
+  #2196f3,
+  #26c6da, 
+  #43a047, 
+  #eeff41, 
+  #f9a825, 
+  #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Sixtyfour Convergence", serif;
+    font-weight: 400;
+    font-style: normal;
+    background: linear-gradient(to right, 
+  #ef5350,
+  #f48fb1,
+  #7e57c2,
+  #2196f3,
+  #26c6da, 
+  #43a047, 
+  #eeff41, 
+  #f9a825, 
+  #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.option {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.hide{
+  display: none;
+}
+
+#form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#17ccc3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s; 
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 8px #999;
+}
+
+#form button:hover {
+    background-color: #008e86;
+  }
+  
+#form button:active {
+    background-color: #008e86;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    border-color:#17ccc3 ;
+    border-radius: 5px;
+    align-items: center;
+    height: 40%;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 60%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+#fieldset{
+  border-color:#17ccc3 ;
+  border-radius: 5px;
+}
+
