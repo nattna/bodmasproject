@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
 
 body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-	background-color:#02d6da;
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+	background-color:#17ccc3;
 }
 
 .container {
@@ -36,11 +40,20 @@ h1 {
 }
 
 h2 {
-    text-align: center;
-    color: #02d6da;
-    font-family: "Sixtyfour Convergence", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Sixtyfour Convergence", serif;
+  text-align: center;
+  background: linear-gradient(to right, 
+  #ef5350,
+  #f48fb1,
+  #7e57c2,j
+  #2196f3,
+  #26c6da, 
+  #43a047, 
+  #eeff41, 
+  #f9a825, 
+  #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
 
 .question {
@@ -60,7 +73,7 @@ h2 {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #428bca;
+  background-color: #17ccc3;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -69,11 +82,12 @@ h2 {
   transition: background-color 0.3s;
   margin-right: 10px;
   margin-bottom: 20px;
+  box-shadow: 0 9px #999;
 }
 .bttn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #02d6da;
+    background-color: #17ccc3;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -84,10 +98,26 @@ h2 {
     margin-bottom: 20px;
     text-decoration: none;
     text-align: center;
+    box-shadow: 0 8px #999;
   }
 
+.bttn:hover {
+    background-color: #008e86;
+  }
+
+.bttn:active {
+    background-color: #008e86;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 .button:hover {
-  background-color: #3071a9;
+  background-color: #008e86;
+}
+
+.button:active {
+  background-color: #008e86;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .result {
@@ -99,84 +129,3 @@ h2 {
 .hide{
   display: none;
 }
-
-
-/*,
-*::before,
-*::after {
-	background-position: 0 0;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: normal;
-	image-rendering: pixelated;
-}
-
-*::before,
-*::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-	background-color: black;
-	background-image: url(https://res.cloudinary.com/ramenhead/image/upload/v1680951844/Enjl-Starry%20Space%20Background/background_1_iihlyn.png);
-	animation-name: starshift-far;
-	animation-duration: 38s;
-}
-
-body::before {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-	background-color: rgba(0, 0, 0, .44);
-
-	background-image: url(https://res.cloudinary.com/ramenhead/image/upload/v1680951844/Enjl-Starry%20Space%20Background/background_4_atkvtl.png);
-	animation-name: starshift-mid;
-	animation-duration: 28s;
-}
-
-body::after {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-	background-color: rgba(0, 0, 0, 0.33);
-	background-image: url(https://res.cloudinary.com/ramenhead/image/upload/v1680951844/Enjl-Starry%20Space%20Background/background_3_pxzwan.png);
-	background: url(https://res.cloudinary.com/ramenhead/image/upload/v1680951844/Enjl-Starry%20Space%20Background/background_2_a3hs0v.png);
-	animation-name: starshift-near;
-	animation-duration: 20s;
-	opacity: 0.6;
- 
-	mix-blend-mode: color-dodge;
-	background-size: calc(256px * 2) calc(224px * 2);
-}
-
-@keyframes starshift-far {
-	from {
-		background-position: 0 224px;
-	}
-	to {
-		background-position: 256px 0;
-	}
-}
-
-@keyframes starshift-mid {
-	from {
-		background-position: 0 224px;
-	}
-	to {
-		background-position: 512px 0;
-	}
-}
-
-@keyframes starshift-near {
-	from {
-		background-position: 0 224px;
-	}
-	to {
-		background-position: 768px 0;
-	}
-}*/
