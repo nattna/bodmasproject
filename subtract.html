@@ -3,50 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Browser name -->
     <title>Brackets</title>
+    <!-- Links to the stylesheet for this page -->
     <link rel="stylesheet" href="sections.css"/>
 </head>
 <body>
+    <!-- Elements in this division are all contained in the container -->
     <div class="container">
-        <div id="brackets" class="justify-centre flex-column">
-            <h2 id="minus">Subraction</h2>
-            <p>Subtraction is the <b>6th operator</b> in the BODMAS rule</p>
-            <p>Any Subtractions are done last after any of the operators before it are completed</p>
-            <p>Subtraction has the mathematical operation of <b>'-'</b></p>
-            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b></p>
-            <p><b>Below are some examples of BODMAS questions using division to give you an idea:</b></p>
+        <!-- Elements in this division adjust based on the user's screen size but are centred in a column -->
+        <div id="subtraction" class="justify-centre flex-column">
+            <h2 id="minus">SUBTRACTION</h2><!-- Page Heading -->
+            <!-- Simple and easy to understand explanation of the operator -->
+            <p>Subtraction is the <b> last or 6th operator</b> in the BODMAS rule.</p>
+            <p>Any Subtractions are done last after any of the operators before it are completed.</p>
+            <p>Subtraction has the mathematical operation of <b>'-'</b>.</p>
+            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b>.</p>
+            <p><b>Below are some examples of BODMAS questions using subtraction to give you an idea:</b></p>
+            <!-- Items are in an unordered list -->
             <ul>
-                <li>8 &divide; 4 + 5 = 2 + 5 = 7</li>
-                <li>(7x6) &divide; 2 = 42 &divide; 2 = 21</li>
-                <li>1<sup>3</sup> &divide; 1 = 1 &divide; 1 = 1</li>
+                <li>42 - (11 - 5) = 42 - 6 = 36</li>
+                <li>4 - 12 &divide; 4  = 4 - 3 = 1</li>
+                <li>4<sup>2</sup> - 6 = 16 - 6 = 10</li>
             </ul>
             <p>Below are some step by step examples of BODMAS questions using subtraction
                and where you might go wrong:
             </p>
+            <!-- Items are in an ordered list -->
             <ol>
-                <li>7 + 4 x 2<sup>2</sup></p></li>
-                <p>Answer = 8</p>
-                <p>Potential mistake: You may end up calculating 7 - 4 as you may know to work from left to right
+                <li> 8 - 24 &divide; 6</li>
+                <p>Answer = 4</p>
+                <p>Potential mistake: You may end up calculating 8 - 24 as you may know to work from left to right
                    for equations but, in BODMAS you work based on the order of importance, therefore you must do
-                   calculate the order, then you multify and finally add.</p>
+                   calculate the division and finally subtract.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;">
-                <li>99 - 3<sup>3</sup> + 50 </p></li>
-                <p>Answer = 22 </p>
-                <p>Potential mistake: You may end up calculating 99 - 27 after calculating 3<sup>3</sup> (= 27) 
-                   as you may know to work from left to right for equations but, in BODMAS you work based on the 
-                   order of importance, therefore you must calculate the order, then you add and finally subtract.</p>
+                <img src = "example16.png" style="width:600px;height:350px;">
+                <li>17 - 2 x (3 + 2)</li>
+                <p>Answer = 7 </p>
+                <p>Potential mistake: You may end up calculating 17 - 2 as you may know to work from left to right 
+                   for equations but, in BODMAS you work based on the order of importance, therefore you must 
+                   calculate what is in the brackets, then multify and finally subtract.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;"></p>
-                <li>7 + 4 x 2<sup>2</sup></p></li>
-                <p>Answer = 8</p>
-                <p>Potential mistake: You may end up calculating 7 - 4 as you may know to work from left to right
-                   for equations but, in BODMAS you work based on the order of importance, therefore you must do
-                   calculate the order, then you multify and finally add.</p>
+                <img src = "example17.png" style="width:600px;height:350px;"></p>
+                <li>(19 + 8) - 4 x 2</li>
+                <p>Answer = 19 </p>
+                <p>Potential mistake: You may end up calculating 27 - 4 after calculating (19 + 8) = 27, you may 
+                   know to work from left to right for equations but, in BODMAS you work based on the order of 
+                   importance, therefore you must do calculate what is in the brackets, then multify and finally subtract.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;">
+                <img src = "example18.png" style="width:700px;height:350px;">
             </ol>
+            <p><b>Have a go at the questions below:</b></p>
+            <div id="demo"> <!-- Elements in this division all have id demo to connect to stylesheet -->
+                <ol>
+                    <li>(19 - 5) &divide; 7</li>
+                    <!-- Calls the function to reveal the answer when the button is pressed -->
+                    <button type="bttn" onclick="revealAnswer_16()">Show Answer</button>
+                    <!-- Answer is invisible as  style="display:none" until the function is called -->
+                    <p id="hiddenAnswer16" style="display:none"><b>= 14 &divide; 7 = 2</b></p>
+                    <li>4 x (11 - 7)</li>
+                    <button type="bttn" onclick="revealAnswer_17()">Show Answer</button>
+                    <p id="hiddenAnswer17" style="display:none"><b>= 4 x 4 = 16</b></p>
+                    <li>(7<sup>2</sup> - 19) x 2</li>
+                    <button type="bttn" onclick="revealAnswer_18()">Show Answer</button>
+                    <p id="hiddenAnswer18" style="display:none"><b>= (49 - 19) x 2 = 30 x 2 = 60</b></p>
+                </ol>
+            </div>
+            <!-- Button to go back to the home page -->
+            <button id="home1"><b>&#8592; GO BACK TO HOME PAGE</b></button>
         </div>
     </div>
+    <!-- Link to the Javascript code so that functions called can be carried out -->
+    <script src= "subtract.js"></script>
 </body>
 </html>
+
