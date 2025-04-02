@@ -1,24 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+/*Google Fonts links to apply to the stylesheet*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
-
+/*CSS rule for the body element*/
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #02d6da;
-  display: flex;
-  justify-content: center;
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    background: #17ccc3;/*Shade of blue*/
+    display: flex;
+    justify-content: center;
 }
-
+/*CSS rule for the container element*/
 .container {
   width: 1000px;
   padding: 20px;
   margin-top: 80px;
-  background-color: #fff;
+  background-color: #fff;/*White*/
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
-
-h1 {
+/*CSS rule for the h2 element*/
+h2 {
   font-family: "Sixtyfour Convergence", serif;
+  font-weight: 400;
+  font-style: normal;
   text-align: center;
   background: linear-gradient(to right, 
   #ef5350,
@@ -32,34 +38,80 @@ h1 {
   #ff5722);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-h2 {
-    text-align: center;
-    color: #02d6da;
-    font-family: "Sixtyfour Convergence", serif;
-    font-weight: 400;
-    font-style: normal;
   }
 
+/*CSS rule for the demo element*/
+#demo button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #17ccc3;/*Shade of blue*/
+    color: #fff;/*White*/
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 8px #999;
+  }
+
+  #demo button:hover {
+    background-color: #008e86;
+  }
+  
+  #demo button:active {
+    background-color: #008e86;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+/*CSS rule for the home1 element*/
+#home1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #17ccc3;/*Shade of blue*/
+    color: #fff;/*White*/
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 8px #999;
+}
+#home1 button:hover {
+  background-color: #008e86;
+}
+
+#home1 button:active {
+  background-color: #008e86;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*CSS rule for the class with question */
 .question {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
+/*CSS rule for the class with options*/
 .options {
   margin-bottom: 20px;
 }
-
+/*CSS rule for the class with option*/
 .option {
   display: block;
   margin-bottom: 10px;
 }
-
+/*CSS rule for the class with button*/
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #428bca;
+  background-color: #17ccc3;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -68,11 +120,21 @@ h2 {
   transition: background-color 0.3s;
   margin-right: 10px;
   margin-bottom: 20px;
+  box-shadow: 0 9px #999;
+}
+.button:hover {
+  background-color: #008e86;
+}
+
+.button:active {
+  background-color: #008e86;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .bttn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #02d6da;
+    background-color: #17ccc3;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -83,18 +145,25 @@ h2 {
     margin-bottom: 20px;
     text-decoration: none;
     text-align: center;
+    box-shadow: 0 8px #999;
   }
 
-.button:hover {
-  background-color: #3071a9;
-}
+.bttn:hover {
+    background-color: #008e86;
+  }
 
+.bttn:active {
+    background-color: #008e86;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+/*CSS rule for the class with result*/
 .result {
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
 }
-
+/*CSS rule for the class that mentions hide*/
 .hide{
   display: none;
 }
