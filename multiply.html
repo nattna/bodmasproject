@@ -3,50 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brackets</title>
+    <!-- Browser name -->
+    <title>Multiplication</title>
+    <!-- Links to the stylesheet for this page -->
     <link rel="stylesheet" href="sections.css"/>
 </head>
 <body>
+    <!-- Elements in this division are all contained in the container -->
     <div class="container">
-        <div id="brackets" class="justify-centre flex-column">
-            <h2 id="multify">Multiplication</h2>
-            <p>Multiplication is the <b>4th operator</b> in the BODMAS rule</p>
-            <p>Any multiplications are done after anything in brackets, orders and divisions are done first</p>
-            <p>Multiplication has the mathematical operation of <b>'x'</b></p>
-            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b></p>
-            <p><b>Below are some examples of BODMAS questions using division to give you an idea:</b></p>
+        <!-- Elements in this division adjust based on the user's screen size but are centred in a column -->
+        <div id="multiplication" class="justify-centre flex-column">
+            <h2 id="multify">MULTIPLICATION</h2><!-- Page Heading -->
+            <!-- Simple and easy to understand explanation of the operator -->
+            <p>Multiplication is the <b>4th operator</b> in the BODMAS rule.</p>
+            <p>Any multiplications are done after anything in brackets, orders and divisions are done first.</p>
+            <p>Multiplication has the mathematical operation of <b>'x'</b>.</p>
+            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b>.</p>
+            <p><b>Below are some examples of BODMAS questions using multiplication to give you an idea:</b></p>
+            <!-- Items are in an unordered list -->
             <ul>
-                <li>8 &divide; 4 + 5 = 2 + 5 = 7</li>
-                <li>(7x6) &divide; 2 = 42 &divide; 2 = 21</li>
-                <li>1<sup>3</sup> &divide; 1 = 1 &divide; 1 = 1</li>
+                <li>5 x 5 + 5 = 25 + 5 = 30</li>
+                <li>(3 x 12) x 5 = 36 x 5 = 180</li>
+                <li>8<sup>2</sup> &divide; 4 x 6 = 64 &divide; 4 x 6 = 16 x 6 = 96</li>
             </ul>
             <p>Below are some step by step examples of BODMAS questions using multiplication
                and where you might go wrong:
             </p>
+            <!-- Items are in an ordered list -->
             <ol>
-                <li>7 + 4 x 2<sup>2</sup></p></li>
-                <p>Answer = 8</p>
-                <p>Potential mistake: You may end up calculating 7 - 4 as you may know to work from left to right
+                <li>10 x 16 &divide; 4 </li>
+                <p>Answer = 40</p>
+                <p>Potential mistake: You may end up calculating 10 x 16 first as you may know to work from left to right
                    for equations but, in BODMAS you work based on the order of importance, therefore you must do
-                   calculate the order, then you multify and finally add.</p>
+                   calculate the division, then you finally multify.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;">
-                <li>99 - 3<sup>3</sup> + 50 </p></li>
-                <p>Answer = 22 </p>
-                <p>Potential mistake: You may end up calculating 99 - 27 after calculating 3<sup>3</sup> (= 27) 
-                   as you may know to work from left to right for equations but, in BODMAS you work based on the 
-                   order of importance, therefore you must calculate the order, then you add and finally subtract.</p>
+                <img src = "example10.png" style="width:600px;height:350px;">
+                <li> 8 x 81 &divide; 3<sup>3</sup></li>
+                <p>Answer = 24 </p>
+                <p>Potential mistake: You may end up calculating 8 x 81 first as you may know to work from left to right 
+                   for equations but, in BODMAS you work based on the order of importance, therefore you must 
+                   calculate the order, then you divide and finally multify.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;"></p>
-                <li>7 + 4 x 2<sup>2</sup></p></li>
-                <p>Answer = 8</p>
-                <p>Potential mistake: You may end up calculating 7 - 4 as you may know to work from left to right
+                <img src = "example11.png" style="width:450px;height:300px;"></p>
+                <li>(30 x 51 - 7<sup>2</sup>) &divide; 10 </li>
+                <p>Answer = 6</p>
+                <p>Potential mistake: You may end up calculating 30 x 51 in the brackets first as you may know to work from left to right
                    for equations but, in BODMAS you work based on the order of importance, therefore you must do
-                   calculate the order, then you multify and finally add.</p>
+                   calculate what is in the brackets first which is the order, then you subtract and multify. 
+                   Then finally outside the brackets you divide.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;">
+                <img src = "example12.png" style="width:500px;height:350px;">
             </ol>
+            <p><b>Have a go at the questions below:</b></p>
+            <div id="demo"> <!-- Elements in this division all have id demo to connect to stylesheet -->
+                <ol>
+                    <li>(9 x 3) - 5</li>
+                    <!-- Calls the function to reveal the answer when the button is pressed -->
+                    <button type="bttn" onclick="revealAnswer_10()">Show Answer</button>
+                    <!-- Answer is invisible as  style="display:none" until the function is called -->
+                    <p id="hiddenAnswer10" style="display:none"><b>= 27 - 5 = 22</b></p>
+                    <li>2<sup>2</sup> x 9</li>
+                    <button type="bttn" onclick="revealAnswer_11()">Show Answer</button>
+                    <p id="hiddenAnswer11" style="display:none"><b>= 4 x 9 = 36</b></p>
+                    <li>49 + (8 x 7) - 9</li>
+                    <button type="bttn" onclick="revealAnswer_12()">Show Answer</button>
+                    <p id="hiddenAnswer12" style="display:none"><b>= 49 + 56 - 9 = 105 - 9 = 96</b></p>
+                </ol>
+            </div>
+            <!-- Button to go back to the home page -->
+            <button id="home1"><b>&#8592; GO BACK TO HOME PAGE</b></button>
         </div>
     </div>
+    <!-- Link to the Javascript code so that functions called can be carried out -->
+    <script src= "multiply.js"></script>
 </body>
 </html>
+
+
+
+
