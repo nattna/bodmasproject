@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+    <link rel="stylesheet" href="competitiveGame_page1.css">
+</head>
+<body>
+    <div class="container">
+        <div id="login" class="justify-centre flex-column">
+            <form id="form" action="/signup" method="POST">
+                <h1><b>ARENA OF THE ORDER OF OPS</b></h1>
+                <p>The aim of the game is to type your answers as fast as you can in the time limit 
+                    to gain as many points as you possibly can. Questions that you get wrong gives 
+                    you less points so, do the best that you can. A higher score increases your 
+                    chances at a higher place on the leaderboard. <b>BEST OF LUCK!!!</b>
+                </p>
+                <legend><b>Please register below:</b></legend>
+                <fieldset id="fieldset">
+                <div class="input-control">
+                    <label for="username">Username:</label>
+                    <input id="username" name="username" type="text" class="form-control">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="password" class="form-control">
+                    <div class="error"></div>
+                </div>
+                </fieldset>
+                <button>Let's Play!</button>
+            </form>
+        </div>
+    </div>
+    <script defer src="competitive_game.js"></script>
+    <script defer src="competitive_game_2.js"></script>
+</body>
+</html>
+
+
+
+
+
