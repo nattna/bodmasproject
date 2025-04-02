@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brackets</title>
+     <!-- Browser name -->
+    <title>Order</title>
+    <!-- Links to the stylesheet for this page -->
     <link rel="stylesheet" href="sections.css"/>
 </head>
 <body>
+    <!-- Elements in this division are all contained in the container -->
     <div class="container">
-        <div id="brackets" class="justify-centre flex-column">
-            <h2 id="orders">Order</h2>
-            <p>Order is the <b>2nd operator</b> in the BODMAS rule</p>
-            <p>Any orders are done after anything in brackets if there are any</p>
+        <!-- Elements in this division adjust based on the user's screen size but are centred in a column -->
+        <div id="order" class="justify-centre flex-column">
+            <h2 id="orders">ORDER</h2><!-- Page Heading -->
+            <!-- Simple and easy to understand explanation of the operator -->
+            <p>Order is the <b>2nd operator</b> in the BODMAS rule.</p>
+            <p>Any orders are done after anything in brackets if there are any.</p>
             <p>Orders can refer to either <b>powers, indicies, roots or exponents</b>
-               (For example 2<sup>2</sup> = 4, 3<sup>3</sup> = 27)</p>
-            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b></p>
+               (For example 2<sup>2</sup> = 4, 3<sup>3</sup> = 27).</p>
+            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b>.</p>
             <p><b>Below are some examples of BODMAS questions using order to give you an idea:</b></p>
+            <!-- Items are in an unordered list -->
             <ul>
                 <li>2<sup>2</sup> + 8 = 4 + 8 = 12</li>
                 <li>3 x 5<sup>2</sup> = 3 x 25 = 75</li>
@@ -23,22 +29,25 @@
             </ul>
             <p><b>Below are some examples of BODMAS questions using order
                and where you might go wrong:</b></p>
+            <!-- Items are in an ordered list -->
             <ol>
-                <li>7 + 4 x 2<sup>2</sup></p></li>
+                <li>7 + 4 x 2<sup>2</sup></li>
                 <p>Answer = 23</p>
                 <p>Potential mistake: You may end up calculating 7 + 4 as you may know to work from left to right
                    for equations but, in BODMAS you work based on the order of importance, therefore you must do
                    calculate the order, then you multify and finally add.</p>
+                <!-- Adapted abstract syntax tree applied here-->
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
+                <!-- Links to the images file -->
                 <img src = "example4.png" style="width:600px;height:350px;">
-                <li>99 - 3<sup>3</sup> + 50 </p></li>
+                <li>99 - 3<sup>3</sup> + 50</li>
                 <p>Answer = 22 </p>
                 <p>Potential mistake: You may end up calculating 99 - 27 after calculating 3<sup>3</sup> (= 27) 
                    as you may know to work from left to right for equations but, in BODMAS you work based on the 
                    order of importance, therefore you must calculate the order, then you add and finally subtract.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
                 <img src = "example5.png" style="width:600px;height:350px;"></p>
-                <li>144 &divide; 2 x 6<sup>2</sup> </p></li>
+                <li>144 &divide; 2 x 6<sup>2</sup></li>
                 <p>Answer = 2</p>
                 <p>Potential mistake: You may end up calculating 144 &divide; 2 as you may know to work from left to right
                     for equations but, in BODMAS you work based on the order of importance, therefore you must do
@@ -46,12 +55,30 @@
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
                 <img src = "example6.png" style="width:600px;height:350px;">
             </ol>
-            <p><b>Have a go at the example below:</b></p>
-            <div id="demo">
-                <p>Let AJAX change this text</p>
-                <button type="button" onclick="loadAnswer_4()">Show Answer</button>
+            <p><b>Have a go at the questions below:</b></p>
+            <div id="demo"> <!-- Elements in this division all have id demo to connect to stylesheet -->
+                <ol>
+                    <li>59 - 3<sup>2</sup></li>
+                    <!-- Calls the function to reveal the answer when the button is pressed -->
+                    <button type="bttn" onclick="revealAnswer_4()">Show Answer</button>
+                    <!-- Answer is invisible as  style="display:none" until the function is called -->
+                    <p id="hiddenAnswer4" style="display:none"><b>= 59 - 9 = 50</b></p>
+                    <li>9<sup>2</sup> &divide; 3</li>
+                    <button type="bttn" onclick="revealAnswer_5()">Show Answer</button>
+                    <p id="hiddenAnswer5" style="display:none"><b>= 81 &divide; 3 = 27</b></p>
+                    <li>4<sup>2</sup> + 47 - 10</li>
+                    <button type="bttn" onclick="revealAnswer_6()">Show Answer</button>
+                    <p id="hiddenAnswer6" style="display:none"><b>= 16 + 47 - 10 = 63 - 10 = 53</b></p>
+                </ol>
             </div>
+            <!-- Button to go back to the home page -->
+            <button id="home1"><b>&#8592; GO BACK TO HOME PAGE</b></button>
         </div>
     </div>
+    <!-- Link to the Javascript code so that functions called can be carried out -->
+    <script src= "order.js"></script>
 </body>
 </html>
+
+
+
