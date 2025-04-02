@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brackets</title>
-    <link rel="stylesheet" href="sections.css"/>
+     <!-- Browser name -->
+    <title>Brackets</title> 
+    <!-- Links to the stylesheet for this page -->
+    <link rel="stylesheet" href="sections.css"/> 
 </head>
 <body>
-    <div class="container">
+    <!-- Elements in this division are all contained in the container -->
+    <div class="container"> 
+        <!-- Elements in this division adjust based on the user's screen size but are centred in a column -->
         <div id="brackets" class="justify-centre flex-column">
-            <h2 id="Brackets"><b>Brackets</b></h2>
+            <h2 id="Brackets"><b>BRACKETS</b></h2> <!-- Page Heading -->
+            <!-- Simple and easy to understand explanation of the operator -->
             <p>Brackets (also known as parentheses) is the <b>1st operator</b> in the BODMAS rule.</p>
-            <p>Anything you see in the brackets, you start with <b>first.</b></p>
-            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE.</b></p>
+            <p>Anything you see in the brackets, you start with <b>first</b>.</p>
+            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b>.</p>
             <p><b>Below are some examples of BODMAS questions using order to give you an idea:</b></p>
+            <!-- Items are in an unordered list -->
             <ul>
-                <li>2<sup>2</sup> + 8 = 4 + 8 = 12</li>
-                <li>3 x 5<sup>2</sup> = 3 x 25 = 75</li>
-                <li>4<sup>3</sup> &divide; 4 = 64 &divide; 10 = 16</li>
+                <li>(3 x 5) - 14 = 15 - 14 = 1</li>
+                <li>4 x (6 - 2)= 4 x 4 = 16</li>
+                <li>77 - (3 x 4) + 5 = 77 - 12 + 5 = 65 + 5 = 70</li>
             </ul>
             <p><b>Below are some examples of BODMAS questions using brackets
                   and where you might go wrong:</b></p>
+            <!-- Items are in an ordered list -->
             <ol>
                 <li>20 - 2 x (3 + 3)</li>
                 <p>Answer = 8</p>
                 <p>Potential mistake: You may end up calculating 20 - 2 as you may know to work from left to right
                    for equations but, in BODMAS you work based on the order of importance. Therefore you must do
                    what is in the brackets first, then you multify and finally subtract.</p>
-                   <p>Here is a further step by step breakdown for you to understand:</p>
-                   <img src = "example1.png" alt="example1" style="width:600px;height:350px;">
+                <!-- Adapted abstract syntax tree applied here-->
+                <p>Here is a further step by step breakdown for you to understand:</p> 
+                <!-- Links to the images file -->
+                <img src = "example1.png" style="width:600px;height:350px;"> 
                 <li> 10 + (8 x 5) - 7 </li>
                 <p>Answer = 43</p>
                 <p>Potential mistake: You may end up calculating 40 - 7 after doing what is in the brackets
@@ -36,7 +45,7 @@
                    what is in the brackets first, then you add and finally subtract.</p>
                 <p>Here is a further step by step breakdown for you to understand:</p>
                 <img src = "example2.png" style="width:600px;height:350px;">
-                <li>52 - 3<sup>2</sup> + (7 x 3) </li>
+                <li>52 - 3<sup>2</sup> + (7 x 3)</li>
                 <p>Answer = 22</p>
                 <p>Potential mistake: You may end up calculating 52 - 3<sup>2</sup> as you may know to work from left to right
                    for equations but, in BODMAS you work based on the order of importance, therefore you must do
@@ -44,14 +53,28 @@
                 <p>Here is a further step by step breakdown for you to understand:</p>
                     <img src = "example3.png" style="width:700px;height:350px;">
             </ol>
-            <p><b>Have a go at the example below:</b></p>
-            <div id="demo">
-                <p>Let AJAX change this text</p>
-                <button type="button" onclick="loadDoc()">Show Answer</button>
+            <p><b>Have a go at the questions below:</b></p>
+            <div id="demo"> <!-- Elements in this division all have id demo to connect to stylesheet -->
+                <ol>
+                    <li>(7 + 8) x 9</li>
+                     <!-- Calls the function to reveal the answer when the button is pressed -->
+                    <button type="bttn" onclick="revealAnswer_1()">Show Answer</button>
+                    <!-- Answer is invisible as  style="display:none" until the function is called -->
+                    <p id="hiddenAnswer" style="display:none"><b>= 15 x 9 = 135</b></p>
+                    <li>14 + (27 - 15)</li>
+                    <button type="bttn" onclick="revealAnswer_2()">Show Answer</button>
+                    <p id="hiddenAnswer2" style="display:none"><b>= 14 + 12 = 26</b></p>
+                    <li>99 &divide; (8 + 3) - 7</li>
+                    <button type="bttn" onclick="revealAnswer_3()">Show Answer</button>
+                    <p id="hiddenAnswer3" style="display:none"><b>= 99 &divide; 11 - 7 = 9 - 7 = 2</b></p>
+                </ol>
             </div>
+             <!-- Button to go back to the home page -->
+            <button id="home1"><b>&#8592; GO BACK TO HOME PAGE</b></button>
         </div>
     </div>
-    <script scr= "brackets.js"></script>
+     <!-- Link to the Javascript code so that functions called can be carried out -->
+    <script src= "brackets.js"></script>
 </body>
 </html
 
