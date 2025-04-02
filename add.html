@@ -3,50 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brackets</title>
+    <!-- Browser name -->
+    <title>Addition</title>
+    <!-- Links to the stylesheet for this page -->
     <link rel="stylesheet" href="sections.css"/>
 </head>
 <body>
+    <!-- Elements in this division are all contained in the container -->
     <div class="container">
-        <div id="brackets" class="justify-centre flex-column">
-            <h2 id="Adding">Addition</h2>
-            <p>Addition is the <b>5th operator</b> in the BODMAS rule</p>
-            <p>Any Additions are done after anything in brackets, orders, divisions and multiplications are done first</p>
-            <p>Addition has the mathematical operation of <b>'+'</b></p>
-            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b></p>
-            <p><b>Below are some examples of BODMAS questions using division to give you an idea:</b></p>
+        <!-- Elements in this division adjust based on the user's screen size but are centred in a column -->
+        <div id="addition" class="justify-centre flex-column">
+            <h2 id="Adding">ADDITION</h2><!-- Page Heading -->
+            <!-- Simple and easy to understand explanation of the operator -->
+            <p>Addition is the <b>5th operator</b> in the BODMAS rule.</p>
+            <p>Any Additions are done after anything in brackets, orders, divisions and multiplications are done first.</p>
+            <p>Addition has the mathematical operation of <b>'+'</b>.</p>
+            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b>.</p>
+            <p><b>Below are some examples of BODMAS questions using addition to give you an idea:</b></p>
+            <!-- Items are in an unordered list -->
             <ul>
-                <li>8 &divide; 4 + 5 = 2 + 5 = 7</li>
-                <li>(7x6) &divide; 2 = 42 &divide; 2 = 21</li>
-                <li>1<sup>3</sup> &divide; 1 = 1 &divide; 1 = 1</li>
+                <li>6 + 4<sup>3</sup> = 6 + 64 = 70</li>
+                <li>(9 + 35) &divide; 11 + 8 = 44 &divide; 11 + 8 = 4 + 8 = 12 </li>
+                <li> 3 + 4 + 5 x (6 x 7) 1 = 3 + 4 + 5 x 42 = 3 + 4 + 210 = 7 + 120 = 217</li>
             </ul>
             <p>Below are some step by step examples of BODMAS questions using addition
                and also included is where you might go wrong:
             </p>
+            <!-- Items are in an ordered list -->
             <ol>
-                <li>7 + 4 x 2<sup>2</sup></p></li>
-                <p>Answer = 8</p>
+                <li>7 + 7 x 7 </li>
+                <p>Answer = 56</p>
+                <p>Potential mistake: You may end up calculating 7 x 7 as you may know to work from left to right
+                   for equations but, in BODMAS you work based on the order of importance, therefore you must do
+                   calculate the multiplication and finally add.</p>
+                <p><b>Here is a further step by step breakdown for you to understand:</b></p>
+                <img src = "example13.png" style="width:650px;height:350px;">
+                <li>12 + 15 &divide; 3</li>
+                <p>Answer = 17 </p>
+                <p>Potential mistake: You may end up calculating 8 + 27 as you may know to work from left to right 
+                   for equations but, in BODMAS you work based on the order of importance, therefore you must 
+                   calculate the order, then you divide and finally add.</p>
+                <p><b>Here is a further step by step breakdown for you to understand:</b></p>
+                <img src = "example14.png" style="width:600px;height:350px;"></p>
+                <li>8 + 27 &divide; 3<sup>3</sup></li>
+                <p>Answer = 9</p>
                 <p>Potential mistake: You may end up calculating 7 - 4 as you may know to work from left to right
                    for equations but, in BODMAS you work based on the order of importance, therefore you must do
                    calculate the order, then you multify and finally add.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;">
-                <li>99 - 3<sup>3</sup> + 50 </p></li>
-                <p>Answer = 22 </p>
-                <p>Potential mistake: You may end up calculating 99 - 27 after calculating 3<sup>3</sup> (= 27) 
-                   as you may know to work from left to right for equations but, in BODMAS you work based on the 
-                   order of importance, therefore you must calculate the order, then you add and finally subtract.</p>
-                <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;"></p>
-                <li>7 + 4 x 2<sup>2</sup></p></li>
-                <p>Answer = 8</p>
-                <p>Potential mistake: You may end up calculating 7 - 4 as you may know to work from left to right
-                   for equations but, in BODMAS you work based on the order of importance, therefore you must do
-                   calculate the order, then you multify and finally add.</p>
-                <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img scr = "example1.jpg" style="width:400px;height:300px;">
+                <img src = "example15.png" style="width:600px;height:350px;">
             </ol>
+            <p><b>Have a go at the questions below:</b></p>
+            <div id="demo"> <!-- Elements in this division all have id demo to connect to stylesheet -->
+                <ol>
+                    <li>17 + 8 - 12</li>
+                    <!-- Calls the function to reveal the answer when the button is pressed -->
+                   <button type="bttn" onclick="revealAnswer_13()">Show Answer</button>
+                   <!-- Answer is invisible as  style="display:none" until the function is called -->
+                   <p id="hiddenAnswer13" style="display:none"><b>= 25 - 12 = 13</b></p>
+                   <li>(23 + 5) &divide; 4</li>
+                   <button type="bttn" onclick="revealAnswer_14()">Show Answer</button>
+                   <p id="hiddenAnswer14" style="display:none"><b>= 28 &divide; 4 = 7</b></p>
+                   <li>4 x (7 + 3) x 2</li>
+                   <button type="bttn" onclick="revealAnswer_15()">Show Answer</button>
+                   <p id="hiddenAnswer15" style="display:none"><b>= 4 x 10 x 2 = 40 x 2 = 80</b></p>
+                </ol>
+            </div>
+            <!-- Button to go back to the home page -->
+            <button id="home1"><b>&#8592; GO BACK TO HOME PAGE</b></button>
         </div>
     </div>
+    <!-- Link to the Javascript code so that functions called can be carried out -->
+    <script src= "add.js"></script>
 </body>
 </html>
+
