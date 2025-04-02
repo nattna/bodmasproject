@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brackets</title>
+    <!-- Browser name -->
+    <title>Division</title>
+    <!-- Links to the stylesheet for this page -->
     <link rel="stylesheet" href="sections.css"/>
 </head>
 <body>
+    <!-- Elements in this division are all contained in the container -->
     <div class="container">
-        <div id="brackets" class="justify-centre flex-column">
-            <h2 id="Divide">Division</h2>
-            <p>Division is the <b>3rd operator</b> in the BODMAS rule</p>
-            <p>Any divisions are done after anything in brackets or orders if there are any</p>
-            <p>Division has the mathematical operation of <b>'&divide;'</b></p>
-            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b></p>
+        <!-- Elements in this division adjust based on the user's screen size but are centred in a column -->
+        <div id="division" class="justify-centre flex-column">
+            <h2 id="Divide">DIVISION</h2><!-- Page Heading -->
+            <!-- Simple and easy to understand explanation of the operator -->
+            <p>Division is the <b>3rd operator</b> in the BODMAS rule.</p>
+            <p>Any divisions are done after anything in brackets or orders if there are any.</p>
+            <p>Division has the mathematical operation of <b>'&divide;'</b>.</p>
+            <p>Remember the order in which you work through a calculation is according to <b>ORDER OF IMPORTANCE</b>.</p>
             <p><b>Below are some examples of BODMAS questions using division to give you an idea:</b></p>
+            <!-- Items are in an unordered list -->
             <ul>
                 <li>8 &divide; 4 + 5 = 2 + 5 = 7</li>
                 <li>(7x6) &divide; 2 = 42 &divide; 2 = 21</li>
@@ -23,6 +29,7 @@
             <p>Below are some step by step examples of BODMAS questions using division
                and where you might go wrong:
             </p>
+            <!-- Items are in an ordered list -->
             <ol>
                 <li> 3 + 24 &divide; 6 
                 </li>
@@ -32,7 +39,7 @@
                    calculate the division and then finally add.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
                 <img src = "example7.png" style="width:600px;height:350px;">
-                <li> 12 x (5<sup>2</sup>) &divide; 5</p></li>
+                <li> 12 x (5<sup>2</sup>) &divide; 5</li>
                 <p>Answer = 22 </p>
                 <p>Potential mistake: You may end up calculating 12 - 25 after calculating 5<sup>2</sup> (= -13) 
                    as you may know to work from left to right for equations but, in BODMAS you work based on the 
@@ -45,13 +52,30 @@
                    for equations but, in BODMAS you work based on the order of importance, therefore you must do
                    calculate the division, then you multify and finally subtract.</p>
                 <p><b>Here is a further step by step breakdown for you to understand:</b></p>
-                <img src = "example9.png" style="width:600px;height:350px;">
+                <img src = "example9.png" style="width:500px;height:350px;">
             </ol>
-            <p><b>Have a go at the example below:</b></p>
-            <div id="demo">
-                <p>Let AJAX change this text</p>
-                <button type="button" onclick="loadAnswer_4()">Show Answer</button>
+            <p><b>Have a go at the questions below:</b></p>
+            <div id="demo"> <!-- Elements in this division all have id demo to connect to stylesheet -->
+                <ol>
+                    <li>48 &divide; 4 - 7</li>
+                    <!-- Calls the function to reveal the answer when the button is pressed -->
+                    <button type="bttn" onclick="revealAnswer_7()">Show Answer</button>
+                    <!-- Answer is invisible as  style="display:none" until the function is called -->
+                    <p id="hiddenAnswer7" style="display:none"><b>= 12 - 7 = 5</b></p>
+                    <li>6 + 15 &divide; 3</li>
+                    <button type="bttn" onclick="revealAnswer_8()">Show Answer</button>
+                    <p id="hiddenAnswer8" style="display:none"><b>= 6 + 5 = 11</b>7</p>
+                    <li> 8 x 6 &divide; 2 - 15</li>
+                    <button type="bttn" onclick="revealAnswer_9()">Show Answer</button>
+                    <p id="hiddenAnswer9" style="display:none"><b>= 8 x 3 - 15 = 24 - 15 = 9</b></p>
+                </ol>
+            </div>
+            <!-- Button to go back to the home page -->
+            <button id="home1"><b>&#8592; GO BACK TO HOME PAGE</b></button>
         </div>
     </div>
+    <!-- Link to the Javascript code so that functions called can be carried out -->
+    <script src= "division.js"></script>
 </body>
 </html>
+
