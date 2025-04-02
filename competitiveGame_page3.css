@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
+
+body { 
+    font-family: "Source Code Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+    background: #17ccc3;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+  width: 1000px;
+  padding: 20px;
+  margin-top: 80px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+    font-family: "Sixtyfour Convergence", serif;
+    text-align: center;
+    background: linear-gradient(to right, 
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da, 
+    #43a047, 
+    #eeff41, 
+    #f9a825, 
+    #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2{
+    text-align: center;
+    font-family: "Sixtyfour Convergence", serif;
+    font-weight: 200;
+    font-style: normal;
+    background: linear-gradient(to right, 
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da, 
+    #43a047, 
+    #eeff41, 
+    #f9a825, 
+    #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color:#17ccc3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s; 
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 8px #999;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: #008e86;
+  }
+  
+.button:active {
+    background-color: #008e86;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#countdown, #scoreSpace {
+    font-size: 20px;
+    font-weight: bold;
+    background-color:#17ccc3;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.questionSpace {
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 100px;
+    padding: 10px;
+  } 
+
+.UserInput {
+    display: block;
+    border-radius: 5px;
+    border: 1.5px solid #17ccc3;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+    font-size: 50px;
+    margin: 20px auto;
+    height: 40%;
+    text-align: center; 
+    justify-content: center;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+  
+.hide{
+    display: none;
+}
+
+#gamepage{
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#submit{
+    display: block;
+    padding: 10px 20px;
+    background-color:#17ccc3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s; 
+    margin: 20px auto;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 8px #999;
+    align-items: center;
+}
+
+
+
+
+
+
+
