@@ -102,26 +102,26 @@ var con = mysql.createConnection({
 
 app.post('/saveGame', (req, res) => {
     if (!req.session.user) {
-        return res.status(401).send("Unauthorized");
+        return res.status(401).send("there is no user playing");
     }
 
     
-    var playerId = req.session.user.playerid; 
+    var playerid = req.session.user.playerid; 
     var score = req.body.score;
 
-    if (!score || !playerId) {
+    if (!score || !playerid) {
         return res.status(400).send("Score and player ID are required.");
     }
 
-    // Insert data into playTime table
-    const sql = "INSERT INTO playTime (playerid, score) VALUES (?, ?)";
-    con.query(sql, [playerId, score], (err, result) => {
+    
+    const sql = "INSERT INTO playTime (playerid, score) VALUES (${playerid}, ${score)";
+    con.query(sql, [playerid, score], (err, result) => {
         if (err) {
             console.log(err);
         }
 
-        // Send a response or redirect after saving
-        res.redirect('/competitiveGame_page1.html'); // Redirect to the next page
+        
+        res.redirect('/competitiveGame_page1.html');
     });
 });
 
