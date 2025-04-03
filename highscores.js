@@ -37,24 +37,24 @@ app.get('/leaderboard', (req, res) => {
 app.post('/top10', encodeUrl, (req, res) => {
     const username = req.body.username;
 
-    con.query('SELECT score FROM leader_board WHERE username = ? ORDER BY score DESC', [username], function(err, result) {
+    con.query('SELECT score FROM leader_board WHERE username = ${username} ORDER BY score DESC', [username], function(err, result) {
         if (result.length === 0) {
-            return res.send("User not found");
+            return res.send("this username isn't in the leaderboard");
         }
 
         const score = result[0].score;
 
-        con.query('SELECT COUNT(*) AS rank FROM leader_board WHERE score > ?', [score], function(err, topscore)
+        con.query('SELECT COUNT(*) AS rank FROM leader_board WHERE score > ${score}', [score], function(err, topten)
         {
-            const rank = rankResult[0].rank + 1; // Rank is 1-based
+            const rank = rankResult[0].rank + 1; 
             res.send(`${rank}`);
         });
     });
 });
 
-app.get('/dashboard', (req, res) => {
+app.get('/leaderboard', (req, res) => {
     if (!req.session.user) {
-        return res.redirect('/'); // Redirect to login if session doesn't exist
+        return res.redirect('/');
     }
     res.sendFile(path.join(__dirname, 'index.html'));
 });
