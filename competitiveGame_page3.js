@@ -245,7 +245,7 @@ class Game {
     }
 }
   
-  // Initialize the quiz
+  // Initialize the game
   const game = new Game([
     { question: "(5 x 7) + 6", answer: "41" },
     { question: "5 + 3 x 9", answer: "32" },
