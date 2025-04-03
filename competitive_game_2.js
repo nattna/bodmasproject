@@ -95,13 +95,13 @@ app.post('/signup', encodeUrl, (req, res) => {
         if (err){
             console.log(err);
         };
-        // checking user already registered or no
+        // Checks whether the user has already registered for the game or not
         con.query(`SELECT * FROM players WHERE username = '${userName}' AND user_password  = '${password}'`, function(err, result){
             if(err){
                 console.log(err);
             };
             if(Object.keys(result).length > 0){
-                res.sendFile(__dirname + '/failReg.html');
+                return res.redirect('/')
             }else{
                 var sql = `INSERT INTO players (username, user_password) VALUES ('${userName}', '${password}')`;
                 con.query(sql, function (err, result) {
@@ -126,7 +126,7 @@ app.post('/signup', encodeUrl, (req, res) => {
 
 });
 
-app.get('/dashboard', (req, res) => {
+app.get('/competitiveGame_page2', (req, res) => {
     if (!req.session.user) {
         return res.redirect('/'); // Redirect to login if session doesn't exist
     }
