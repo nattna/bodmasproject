@@ -75,7 +75,7 @@ const cookieParser = require("cookie-parser");
 const sessions = require('express-session');
 const http = require('http');
 var parseUrl = require('body-parser');
-const path = require('path'); // Added for handling file paths
+const path = require('path'); //Allows for their to be a path for foreign keys 
 
 const app = express();
 var mysql = require('mysql2');
@@ -99,7 +99,7 @@ var con = mysql.createConnection({
     database: "leaderBoard"
 });
 
-
+//checks whether there is a registered session taking place 
 app.post('/saveGame', (req, res) => {
     if (!req.session.user) {
         return res.status(401).send("there is no user playing");
@@ -113,14 +113,14 @@ app.post('/saveGame', (req, res) => {
         return res.status(400).send("Score and player ID are required.");
     }
 
-    
+    //inserts the player's final score for there corresponding id into the database
     const sql = "INSERT INTO playTime (playerid, score) VALUES (${playerid}, ${score)";
     con.query(sql, [playerid, score], (err, result) => {
         if (err) {
             console.log(err);
         }
 
-        
+        //redirects them back to the game sign up page 
         res.redirect('/competitiveGame_page1.html');
     });
 });
